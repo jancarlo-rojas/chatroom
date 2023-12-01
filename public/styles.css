@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+
+
+body {
+  font-family: Montserrat;
+  margin: 0;
+  background-color: #040D12;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  text-align: center;
+  border: 2px solid #93B1A6;
+  background-color: #040D12;
+  color: #93B1A6;
+
+}
+ 
+#chat {
+  max-height: 600px;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #93B1A6;
+  text-align: center;
+  bottom: 50px;
+  background-color: #5C8374;
+  
+}
+
+#footer {
+  background-color: #183D3D;
+  text-align: center;
+  border: 2px solid #93B1A6;
+  bottom: 10px; 
+  color: #040D12;
+}
+
+#dropdown {
+  color: #93B1A6;
+  background-color: #183D3D;
+  border: 1px solid #93B1A6;
+  text-align: center;
+  font-size:17px;
+}
+
+#dropdown-content {
+  display: none;
+  border: 2px solid #93B1A6;
+  background-color: #5C8374;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+  
+  
+}
+
+#dropdown-content li a{
+  padding: 3px;
+  text-decoration: none;
+  display: block;
+  color: #040D12;
+  font-size:12px;
+}
+
+#dropdown:hover #dropdown-content {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: #040D12;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 70%;
+  padding: 5px;
+  background-color: #93B1A6;
+  
+}
+
+
+
+button {
+  padding: 6px;
+  border: none;
+  outline: none;
+  width: 10%;
+  position: relative;
+  border-radius: 8px;
+  background: linear-gradient(to right, #183D3D, #040D12);
+  cursor: pointer; 
+  color: #93B1A6;
+}
+
+

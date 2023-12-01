@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#040D12 ;
+    
+    
+    
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    
+  }
+
+.form-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color:#183D3D;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: #5C8374;
+    color: #93B1A6;
+  }
+
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5C8374;
+    color: #93B1A6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #313131;
+  }
+
+  p {
+    
+    margin-top: 15px;
+  }
+
+  a{
+    text-decoration: none;
+    color: #93B1A6;
+    font-weight: bold;
+  }
+
+  ::placeholder {
+    color: #93B1A6;
+    opacity: 1; /* Firefox */
+  }

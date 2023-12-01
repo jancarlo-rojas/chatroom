@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Chatroom</title>
+</head>
+<body>
+    
+  
+  
+  
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    const socket = io();
+  
+    const messages = document.getElementById("messages");
+    const messageInput = document.getElementById("messageInput");
+  
+    const getCurrentTime = () => {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      return `${hours}:${minutes}`;
+    };
+  
+    socket.on("chat message", (data) => {
+      const { user, message } = data;
+      const li = document.createElement("li");
+      li.textContent = `[${getCurrentTime()}] ${user}: ${message}`;
+      messages.appendChild(li);
+    });
+  
+    const sendMessage = () => {
+      const message = messageInput.value;
+      if (message.trim() !== "") {
+        const currentTime = getCurrentTime();
+        const user = "userx"; // You can modify this to include the actual username if you implement user authentication.
+        const data = { user, message };
+        socket.emit("chat message", data);
+        messageInput.value = "";
+      }
+    };
+  
+    window.sendMessage = sendMessage; // Expose the function to the global scope
+  });</script>
+
+  
+
+  <div id="header">
+        <h1>Public Chatroom</h1>
+  </div>
+    
+    <div id="dropdown">
+        <span><h3>Menu</h3></span>
+        <div id ="dropdown-content">
+          
+          <ul>
+                <li><a class="link" href="/home">Home</a></li>
+                
+            </ul>
+        
+    </div>
+    </div>
+    
+  <div id="chat">
+        <ul id="messages"></ul>
+        <input id="messageInput" autocomplete="off" />
+        
+        <button onclick="sendMessage()">Send</button>
+      
+  </div>
+
+  <div id="footer">
+        <p>&copy; 2023 Jancarlo Rojas</p>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+
+</body>
+</html>
