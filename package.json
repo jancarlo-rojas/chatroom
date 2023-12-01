@@ -7,7 +7,5 @@
     "mongoose": "^8.0.2",
     "socketio": "^1.0.0"
   }
-  "scripts":{
-    "node home.ejs"
-  }
+  
 }
